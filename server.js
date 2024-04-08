@@ -20,7 +20,7 @@ dotenv.config();
 connectDB()
 //middelwares
 app.use(cors({
-  origin: 'https://ecommerce-arof.vercel.app/',
+  origin: 'https://ecommerce-arof.vercel.app',
   credentials: true // if you're using cookies
 }));
 app.use(express.json({limit:'10mb'}));
