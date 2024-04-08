@@ -30,9 +30,7 @@ app.use("/auth", authRoute);
 app.use("/category",categoryRoute);
 app.use("/product",productsRoute);
 
-app.use('*',function(req,res){
-  res.sendFile(path.join(__dirname,'./client/build/index.html'))
-})
+
 
 const PORT = process.env.PORT || 8000;
 console.log(process.env.STRIPE_SECRET_KEY)
