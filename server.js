@@ -19,8 +19,10 @@ const app=express()
 dotenv.config();
 connectDB()
 //middelwares
-app.use(express.static(path.join(__dirname, './client/build')));
-app.use(cors());
+app.use(cors({
+  origin: 'https://your-react-app.vercel.app',
+  credentials: true // if you're using cookies
+}));
 app.use(express.json({limit:'10mb'}));
 app.use(morgan("dev"));
 //routes
